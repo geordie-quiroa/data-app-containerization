@@ -1,4 +1,4 @@
 def lintingFunction():
- return 'Testing linting'
+    return 'Testing linting'
  
 lintingFunction()
