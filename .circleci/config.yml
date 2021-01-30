@@ -11,7 +11,7 @@ jobs:
                   fingerprints: ["85:cd:69:24:6c:c6:fd:f0:87:9c:43:f4:af:13:72:2a"]
             - restore_cache:
                 keys:
-                    - v1-dependencies-{{checksum 'requirements.txt'}}
+                    - v1-dependencies-{{ checksum 'requirements.txt' }}
                     # Fallback case
                     - v1-dependencies-
             - run:
@@ -23,7 +23,7 @@ jobs:
             - save_cache:
                 paths:
                     - ./venv
-                key: v1-dependencies-{{checksum 'requirements.txt'}}
+                key: v1-dependencies-{{ checksum 'requirements.txt' }}
             - run:
                 name: Run lint
                 command: |
