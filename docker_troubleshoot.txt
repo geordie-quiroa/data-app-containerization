@@ -6,7 +6,7 @@
 > docker run -it --log-driver json-file --log-opt mode=non-blocking ubuntu
 # Map ports to external host
 > docker port <container name>
-# Ports mapping
+# Ports mapping -p my_pc_port:container_port
 > docker run  -p 127.0.0.1:80:9999/tcp ubuntu bash
 # Configure memory or resources usage
 > docker run -it --cpus=".25" ubuntu /bin/bash
