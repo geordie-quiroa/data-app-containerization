@@ -1,0 +1,12 @@
+# When it is needed to write and persist at local filesystem
+> docker volume create docker-data
+> docker volume ls
+> docker run -d --name volumetest --mount source=docker-data, target=/app ubuntu:latest
+# Configure logging for container
+> docker run -it --log-driver json-file --log-opt mode=non-blocking ubuntu
+# Map ports to external host
+> docker port <container name>
+# Ports mapping
+> docker run  -p 127.0.0.1:80:9999/tcp ubuntu bash
+# Configure memory or resources usage
+> docker run -it --cpus=".25" ubuntu /bin/bash
